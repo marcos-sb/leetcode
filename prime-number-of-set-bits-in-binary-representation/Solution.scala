@@ -1,9 +1,9 @@
 object Solution {
   def countPrimeSetBits(L: Int, R: Int): Int = {
-    val primes = sieveTo(32)
+    val prime = sieveTo(32)
     var count = 0
     for (n <- L to R) {
-      if (primes(bitsSet(n))) count += 1
+      if (prime(bitsSet(n))) count += 1
     }
     count
   }
