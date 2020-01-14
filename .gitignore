@@ -8,6 +8,9 @@
 *.gch
 *.pch
 
+# Compiler output
+co/
+
 # Compiled Dynamic libraries
 *.so
 *.dylib
