@@ -14,10 +14,12 @@ class MinStack {
 
     public void push(int x) {
         stack.add(x);
-        minimums.add(Math.min(x,minimums.get(minimums.size()-1)));
+        final var min = minimums.isEmpty() ? x : Math.min(x,minimums.get(minimums.size()-1));
+        minimums.add(min);
     }
 
     public void pop() {
+        stack.remove(stack.size()-1);
         minimums.remove(minimums.size()-1);
     }
 
@@ -27,13 +29,6 @@ class MinStack {
 
     public int getMin() {
         return minimums.get(minimums.size()-1);
-    }
-    public static void main(String... args) {
-        final var s = new MinStack();
-        s.push(0);
-        s.pop();
-        s.push(1);
-        System.out.println(s.getMin());
     }
 }
 
