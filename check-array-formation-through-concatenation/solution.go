@@ -1,5 +1,5 @@
 func canFormArray(arr []int, pieces [][]int) bool {
-    m := make([]int, 101) // map[element]position_of_next
+    m := make([]int, 101) // map[element]position
     for i, _ := range m {
         m[i] = -1
     }
