@@ -6,10 +6,8 @@ public class Solution {
         while (r < matrix.length && c >= 0) {
             if (matrix[r][c] == target) {
                 count++;
-                if (r+1 == matrix.length) c--;
-                else if (c-1 < 0) r++;
-                else if (matrix[r+1][c] < target) r++;
-                else c--;
+                r++;
+                c--;
             } else if (matrix[r][c] < target) r++;
             else c--;
         }
