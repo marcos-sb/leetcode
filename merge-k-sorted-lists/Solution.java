@@ -23,7 +23,6 @@ class Solution {
             
             lists[currMin] = lists[currMin].next;
         }
-        
         return head;
     }
 }
